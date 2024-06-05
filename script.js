@@ -154,20 +154,6 @@ $btnMdc.addEventListener('click', e => {
     }
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 function fatorar(num) {
     let resp = [];
 
@@ -178,15 +164,14 @@ function fatorar(num) {
     while (num != 1) {
 
         for (let i = 2; i <= num; i++) {
-            let num2 = fatorarAux(num, i)
+            let num2 = fatorarAux(num, i);
 
             if (num2 != num) {
                 num = num2;
-                resp.push(i)
-                i = 1
+                resp.push(i);
+                i = 1;
             }
         }
-        console.log(num)
     }
 
     return resp;
@@ -194,23 +179,24 @@ function fatorar(num) {
 
 function fatorarAux(n, i) {
     if (n % i == 0) {
-        n = n / i
+        n = n / i;
     }
-    return n
+    return n;
 }
 
 
 
 
 function ehPar(num) {
-	return (num % 2 == 0)
+	return (num % 2 == 0);
 }	
 
 function mod(a, b) {
-	return a % b
+	return a % b;
 }
 
 function ehPrimo(num) {
+    if(num <= 1) return false; 
     for (var i = 2; i < num; i++) 
     if (num % i == 0) return false;
     return true;
